@@ -9,9 +9,9 @@ import cv2
 
 input_size = 368
 
-landmark_size = 27
+landmark_size = 30
 ear_part_num = [20, 15, 15, 5]
-ear_threshold = 0.5
+ear_threshold = 0
 
 r_size = 368
 
@@ -58,6 +58,7 @@ for i, imagePath in enumerate(imagePaths):
 
     # ear-detect---------------------------------------------------------------
     result = pred([np.expand_dims(image, axis=0)/255.])[0]
+    print(result)
     result[result < ear_threshold] = 0 # threshold setting
     result = tf.image.resize(result, [r_size, r_size])
     result = apply_blur(result, landmark_size).numpy()

@@ -28,7 +28,7 @@ INPUT_SIZE = 368
 MAP_SIZE = 100
 MAP_SIGMA = 2.5
 
-LANDMARK_NUM = list(range(27))#[4,9,16,36] # 원하는 point 를 입력
+LANDMARK_NUM = list(range(30))#[4,9,16,36] # 원하는 point 를 입력
 LANDMARK_SIZE = len(LANDMARK_NUM) # ear : 55 / face : 68
 LEARNING_RATE = 0.0001
 BATCH_SIZE = 10
